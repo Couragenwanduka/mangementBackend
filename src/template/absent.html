@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+    .container {
+      padding: 20px;
+    }
+    h2 {
+      color: #d9534f;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    th, td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    th {
+      background-color: #f7f7f7;
+    }
+    .footer {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Daily Absentee Report</h2>
+    <p>Hello Admin,</p>
+    <p>Below is the list of users who did <strong>not clock in</strong> for attendance on <strong>{{DATE}}</strong>:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Full Name</th>
+          <th>Email</th>
+          <th>Department</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{ABSENT_USERS}}
+      </tbody>
+    </table>
+
+    <div class="footer">
+      This is an automated message from the attendance system.
+    </div>
+  </div>
+</body>
+</html>
